@@ -1,0 +1,111 @@
+.container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+label:active p {
+    color: blue!important;
+}
+
+input {
+    display: none;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 600;
+    border-top: 2px solid rgba(192, 192, 192, 0.5);
+    margin: 0;
+    padding: 15px 0;
+}
+
+.img-wrap {
+    padding-bottom: 5%;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 16rem;
+    height: 0;
+    transition: 0.3s;
+}
+
+input:checked ~ div > img{
+    height: 16rem;
+    transition: 0.3s;
+}
+
+.changeColor p {
+    color: blue;
+}
+
+input:checked ~ .bayan-header p,
+.bayan:hover p {
+    color: black;
+}
+
+@media (min-width: 1001px) {
+    .bayan {
+        cursor: pointer;
+    }
+
+    label:hover img {
+        height: 16rem;
+        transition: 0.3s;
+    }
+ 
+    label:hover .bayan-header p{
+        transition: 0.5s;
+    }
+
+    .bayan:hover .bayan-header {
+        background-image: url(images/plus.png);
+        background-size: 3%;
+        background-repeat: no-repeat;
+        background-position: right 5% top 55%;
+    }
+    
+    .bayan:hover .bayan-item:hover .bayan-header,
+    .bayan:hover input:checked ~ .bayan-header {
+        background-image: url(images/noplus.png);
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        width: 60%;
+    }
+
+    .p {
+        font-size: 16px;
+    }
+
+    img {
+        width: 14rem;
+    }
+
+    input:checked ~ div > img{
+        height: 14rem;
+        transition: 0.3s;
+    }
+}
+
+@media (max-width: 760px) {
+    .container {
+        width: 80%;
+    }
+
+    .p {
+        font-size: 14px;
+    }
+
+    img {
+        width: 12rem;
+    }
+
+    input:checked ~ div > img{
+        height: 12rem;
+        transition: 0.3s;
+    }
+}
